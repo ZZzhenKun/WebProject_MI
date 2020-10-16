@@ -1,0 +1,613 @@
+/* 顶部导航条样式 */
+/* 设置顶部导航条高度、背景样式 */
+.top-bar-wrapper{
+    height: 40px;
+    background-color: #333;
+    font-size: 12px;
+    min-width: 1226px;
+}
+/* 去掉下划线、设置字体颜色、居中显示 */
+.top-bar-wrapper a,
+.top-message i{
+    text-decoration: none;
+    color: #b0b0b0;
+    line-height: 40px;
+}
+/* 设置菜单栏为块元素 */
+.content a{
+    display: block;
+}
+/* 设置浮动 */
+.service li,
+.service .line{
+    float: left;
+}
+.top-message{
+    float: right;
+}
+.top-message li,
+.top-message .line,
+.top-message a{
+    float: left;
+}
+/* 设置分割线样式 */
+.content .line{
+    border: 1px solid #424242;
+    height: 13px;
+    margin: 13px 8px;
+}
+/* 设置字体悬浮颜色 */
+.content .service a:hover,
+.content .change a:hover
+{
+    color: #fff;
+}
+/* 设置购物车区域背景颜色、宽度、文字居中 */
+.top-message .shopping-cart{
+    margin-left: 25px;
+    width: 120px;
+    height: 40px;
+    /* 文字居中显示 */
+    text-align: center;
+    background-color: #424242;
+}
+/* 设置购物车区域鼠标悬浮背景颜色 */
+.shopping-cart:hover{
+    background-color: #fff;
+    padding-bottom: 1px;
+}
+/* 设置购物车区域鼠标悬浮字体颜色 */
+.shopping-cart:hover span,
+.shopping-cart:hover i{
+    color: #E9612B;
+}
+/* 设置‘下载APP’的下拉样式 */
+.service .list{
+    /* display: none; */
+    width: 124px;
+    height: 150px;
+    /* 继承了父元素的行高，此时不需要40px的行高，需重新设置 */
+    line-height: 1px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: -40px;
+    z-index: 99999;
+}
+/* 设置图片样式 */
+.service .list img{
+    margin: 18px 17px 18px 17px;
+    width: 90px;
+    height: 90px;
+}
+/* 设置‘小米商城APP’样式 */
+.service .list p{
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+}
+/* 开启定位 */
+.service .drop-down-list{
+    position: relative;
+}
+/* 设置箭头大小 */
+.service .app::after{
+    content: '';
+    display: none;
+    border: 8px solid;
+    width: 0;
+    height: 0;
+    border-color: transparent  transparent #fff transparent;
+    border-top: transparent;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+/* 设置隐层 */
+.service .list{
+    height: 0;
+    overflow: hidden;
+    /* 设置高度变化时间 */
+    transition: height .3s;
+}
+/* 鼠标移入后显示 */
+.service .drop-down-list:hover .list{
+    height: 150px;
+}
+.service .app:hover:after{
+    display: block;
+}
+/* 设置定位 */
+.top-message .shopping-cart{
+    position: relative;
+}
+.top-message .topbar-cart{
+    position: relative;
+}
+/* 设置购物车弹出页面 */
+.top-message .cart-content{
+    width: 315px;
+    height: 0;
+    overflow: hidden;
+    /* background-color: red; */
+    position: absolute;
+    right: 0;
+    top: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    transition: height 0.3s;
+}
+/* 设置弹出页面的字体 */
+.top-message .cart-content{
+    text-align: center;
+    line-height: 100px;
+}
+/* 购物车鼠标移入盖住下边阴影 */
+.shopping-cart:hover{
+    z-index: 9999;
+}
+/* 购物车扩展页面设置移入样式 */
+.topbar-cart:hover .cart-content{
+    height: 100px;
+    color: #000;
+    display: block;
+    z-index: 999;
+}
+/* ------------------------------头部导航条----------------------------------- */
+/* ---------------------------LOGO----------------------------- */
+/* 设置头部导航条 */
+.header{
+    height: 100px;
+    /* background-color: red; */
+    position: relative;
+}
+.header .header-content{
+    width: 1226px;
+    height: 100px;
+    /* background-color: #bbff00; */
+    margin: 0 auto;
+    /* position: relative; */
+}
+/* 设置logo */
+.header-content .logo{
+    margin-top: 22px;
+    position: relative;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+}
+/* 设置头部导航条图标 mi-logo */
+.header-content .mi-logo{
+    display: block;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-color: #ff6700;
+    background-image: url(../IMG/mi-logo.png);
+    background-position: center;
+    transition: margin-left 0.3s;
+}
+/* 设置头部导航条图标 home */
+.header-content .mi-home{
+    display: block;
+    position: absolute;
+    margin-left: -55px;
+    width: 55px;
+    height: 55px;
+    background-color: #ff6700;
+    background-image: url(../IMG/mi-home.png);
+    background-position: center;
+    transition: margin-left 0.3s;
+}
+/* 设置导航条图标的动画效果 */
+.logo:hover .mi-home{
+    margin-left: 0px;
+}
+.logo:hover .mi-logo{
+    margin-left: 55px;
+}
+/* -------------------------------中间内容列表--------------------------------- */
+/* 设置中间列表 */
+.header .header-list ul{
+    width: 850px;
+    height: 100px;
+    margin-left: 55px;
+    margin-top: -77px;
+    font-size: 16px;
+    /* background-color: #bbffaa; */
+}
+/* 设置列表样式 */
+.header .header-list ul li{
+    float: left;   
+    line-height: 100px;
+}
+/* 去除下划线、设置字体间距、颜色、设置块元素 */
+.header .header-list a{
+    display: block;
+    text-decoration: none;    
+    color: #000;
+    margin: 0 10px;
+}
+/* 设置‘全部商品分类’的块的大小、设置浮动 */
+.header .header-list .blank{
+    width: 190px;
+    height: 100px;
+    position: relative;
+}
+/* 设置定位，并且隐藏‘全部商品分类’ */
+.header .header-list .blank a{
+    position: absolute;
+    right: 0;
+    margin-right: 0px;
+    display: none;
+}
+/* 设置hover */
+.header li:not(:first-child) a:hover{
+    color:#ff6700;
+}
+/* 设置下拉页面 */
+.header .header-pull-down-page{
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    background-color: #fff;
+    top: 100px;
+    left: 0;
+    transition: height 0.3s;
+    z-index: 9999;
+}
+/* 设置鼠标悬浮页面下拉 */
+.header-list .show-page:hover ~ .header-pull-down-page,
+.header-pull-down-page:hover{
+    height: 255px;
+    width: 100%;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+    /* background-color: yellow; */
+   border-top: 1px solid #E0E0E0;
+}
+/* ----------------------------搜索区域------------------------------------ */
+/* 设置搜索区域的位置 */
+.search-wrapper{
+    position: relative;
+    top: -80px;
+    /* background-color: red; */
+}
+.search{
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+/* 设置搜索框:字体大小、边框*/
+.search-bar{
+    width: 288px;
+    height: 46px;
+    /* margin-top: 15px; */
+    /* background-color: #bfa; */
+    border: 1px solid #b0b0b0;
+    /* 去掉点击时显示边框 */
+    outline: none;
+    padding-left: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    /* background-color: red; */
+}
+/* 设置搜索按钮框大小、边框 */
+.search .search-botton{
+    width: 52px;
+    height: 48px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border: none;
+    border-left: 1px solid #b0b0b0;
+    /* 去掉点击时显示边框 */
+    outline: none;
+    background-color: #fff;  
+    /* background-color: rebeccapurple; */
+}
+/* 设置搜索按钮样式 */
+.search .fas{
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    font-size: 16px;
+    /* z-index: 999; */
+    text-align: inherit;
+    color: #616161;
+  
+}
+/* 设置搜索栏的默认内容 */
+.search ul li{
+    display: block;
+    background-color: #E0E0E0;
+    margin: 0 5px;
+    float: left;
+    padding: 0 5px;
+    color: #959595;
+    font-size: 12px;
+    z-index: 9;
+}
+/* 设置搜索框默认内容居中显示 */
+.search ul{
+    position: absolute;
+    top: 16px;
+    right: 60px;
+}
+/* 设置鼠标移入搜索框样式、遮盖默认内容 */
+.search-bar:focus{
+    border: 1px solid #ff6700;
+}
+.search-bar:focus ~ .search-botton-all .search-botton{
+    border-left: 1px solid #ff6700;
+}
+.search-bar:focus ~ ul li,
+.search-botton-all:hover ~ ul li{
+    display: none;
+}
+/* 设置搜索按钮鼠标移入的背景色、去掉周围边框 */
+.search-botton-all{
+    position: absolute;
+    width: 52px;
+    height: 50px;
+    right: 1px;
+    top: 1px;
+}
+/* 设置搜索按钮框鼠标移入样式 */
+.search .search-botton-all:hover .search-botton{
+    background-color: #ff6700;
+    width: 54px;
+    height: 50px;
+    top: -1px;
+    right: -1px;
+    border-left: none;
+}
+/* 按钮变白 */
+.search .search-botton-all:hover .fas{
+    color: #fff;
+}
+
+/* ----------------------------左侧竖直导航条（与header-list同一块内）--------------------------------- */
+/* 设置导航栏颜色、宽度、高度 */
+.header-list .left-nav{
+    position: relative;
+    width: 234px;
+    height: 460px;
+    left: -55px;
+    top: -1px;
+    /* background-color: red; */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+}
+/* 取消之前设置的浮动效果 */
+.left-nav ul li{ 
+    clear: left;
+    display: block;
+    height: 42px;
+}
+/* 设置字体居中 */
+.left-nav .left-nav-content li a{
+    height: 42px;
+    width: 174px;
+    padding: 0 30px;
+    line-height: 42px;
+    margin: 0px;
+    float: left;
+}
+/* 设置左侧导航栏箭头居中 */
+.left-nav-content i{
+    float: right;
+    line-height: 42px;   
+}
+.header-list .left-nav .left-nav-content{
+    margin: 0 0;
+    width: 0;
+    height: 0;
+    padding-top: 20px;
+}
+/* 设置字体大小、颜色 */
+.header-list .left-nav .left-nav-content a{
+    font-size: 16px;
+    color: #fff;
+}
+/* 设置鼠标悬浮改变背景颜色 */
+.header-list .left-nav .left-nav-content a:hover{
+    background-color: #ff6700;
+    color: #fff;
+    z-index: 99;
+}
+
+/* ----------------------------设置中间图片显示区-------------------------------------- */
+.banner{
+    position: relative;
+    height: 460px;
+    /* background-color: red; */
+}
+/* 设置图片 */
+.banner img{
+    width: 100%;
+}
+.banner .img-list li{
+    position: absolute;
+}
+/* 设置图片切换小圆点 */
+.banner .pointer{
+    position: absolute;
+    right: 35px;
+    bottom: 27px;
+}
+/* 设置浮动 */
+.banner .pointer li{
+    float: left;
+}
+/* 设置小圆点 */
+.banner .pointer a{
+    float: left;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    margin-right: 6px;
+}
+/* 设置小圆点悬浮 */
+.banner .pointer a:hover,
+.banner .pointer .active{
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+/* --------------------------设置图片左右箭头--------------------------------- */
+/* 设置箭头居中 */
+.prev-next a{
+    /* position: absolute; */
+    width: 41px;
+    height: 69px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.prev-next .prev{
+    position: absolute;
+    width: 41px;
+    height: 69px;
+    left: 234px;
+    /* background-color: red; */
+    background-image: url(../IMG/icon-slides.png);
+    background-position: -83px;
+    z-index: 999;
+}
+.prev-next .next{
+    position: absolute;
+    right: 0;
+    width: 41px;
+    height: 69px;  
+    /* background-color: red; */
+    background-image: url(../IMG/icon-slides.png);
+    background-position: right;
+    z-index: 999;
+}
+.prev-next .prev:hover{
+    background-position: left;
+}
+.prev-next .next:hover{
+    background-position: -42px;
+}
+
+/* --------------------------设置右侧固定悬浮菜单------------------------------ */
+.fixed-nav{
+    position: fixed;
+    width: 26px;
+    height: 206px;
+    /* background-color: red; */
+    right: 50%;
+    bottom: 220px;
+    margin-right: -639px;
+    border-left: 1px solid #F6F6F6;
+    border-right: 1px solid #F6F6F6;
+}
+.fixed-nav a{
+    display: block;
+    height: 40px;
+    line-height: 42px;
+    text-align: center;
+    width: 25px;
+    border-top: 1px solid #F6F6F6;
+}
+.fixed-nav li:last-child{
+    border-bottom: 1px solid #F6F6F6;
+    /* border-bottom: 1px solrgb(7, 5, 5)red; */
+}
+.fixed-nav i{
+    font-size: 16px;
+    color: #999;
+}
+
+/* -----------------------------底部导航栏-------------------------------- */
+/* 左侧 */
+.buttom-nav{
+    height: 170px;
+    /* background-color: red; */
+    margin-top: 14px;
+}
+.buttom-nav .shot-cut{
+    /* float: left; */
+    width: 234px;
+    height: 170px;
+    background-color: #5f5750;
+}
+.buttom-nav li{
+    float: left;
+}
+.shot-cut a{
+    display: block;
+    float: left;
+    width: 76px;
+    height: 84px;
+    /* overflow: hidden; */
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    color: #CECCCA;
+}
+.shot-cut i{
+    display: block;
+    text-align: center;    
+    margin-top: 20px;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+/* 设置鼠标悬浮变色 */
+.shot-cut a:hover{
+    color:#fff;
+}
+/* 设置上分割线 */
+.shot-cut a{
+    position: relative;
+}
+.shot-cut a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 64px;
+    height: 1px;
+    background-color:#645D57;
+    margin: 0 auto;
+    margin-top: 2px;
+}
+/* 设置下分割线 */
+.shot-cut a::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 70px;
+    background-color:#645D57;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto 0;
+    margin-left: 6px;
+}
+/* -----------设置图片-------------- */
+.buttom-img{
+    float: left;
+}
+.buttom-nav .buttom-img img{
+    width: 316px;
+    float: left;
+}
+.buttom-nav{
+    position: relative;
+}
+.buttom-img{
+    position: absolute;
+    left: 248px;
+    top: 0px;
+}
+.buttom-img li:not(:first-child){
+    margin-left: 15px;
+}
